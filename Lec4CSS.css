@@ -1,0 +1,6 @@
+/*외부 스타일 시트*/
+h3 {color:rgb(255, 167, 85); background-color: black;}
+h3:after {content:"★"; font-size: 10pt; background-color: bisque;}
+#first {background-image:url(dog.jfif)}
+#second {background-image:url(dog.jfif)}
+#third {background-image:url(dog.jfif);background-repeat: no-repeat; background-position: center bottom;}
