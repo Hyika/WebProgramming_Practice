@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Form 연습
+        </title>
+    </head>
+    <body>
+        <h3>
+            다양한 입력 폼
+        </h3>
+        <form method="get" action="form_app.js">
+            <!--문자열 입력-->
+            성명: <input type="text" name="person"/> <br>
+            <!--라디오박스 선택(복수선택불가능)-->
+            성별: <input type="radio" name="sex" value="male"/>남성
+                  <input type="radio" name="sex" value="female"/>여성 <br>
+            직업: 
+            <!--목록상자 선택-->
+            <select name="job" size="1">
+                <option>학생</option> <option>회사원</option>
+                <option>공무원</option> <option>기타</option>
+            </select>
+            <p>구입희망분야(복수선택가능)<br>
+            <!--네모박스 선택(복수선택가능)-->
+                - 분야: <input type="checkbox" name="books" value="computer"/>컴퓨터
+                        <input type="checkbox" name="books" value="economy"/>경제
+                        <input type="checkbox" name="books" value="common"/>상식<br>
+                - 비고: <br>
+                <!--텍스트영역-->
+                <textarea name="comments" rows="4" cols="40"/></textarea>
+            </p><hr>
+            <!--버튼-->
+            <input type="submit" value="신청"/>
+            <input type="reset" value="취소"/>
+        </form>
+    </body>
+</html>
