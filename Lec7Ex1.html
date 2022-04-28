@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to the JavaScript</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        //화면에 출력
+        document.write("Hello, welcome to the JavaScript world!<br>");
+
+        //변수 선언 방식
+        //타입을 지정 하지 않아도 됨
+        //선언 시 변수 타입은 'var'
+        var index, name = "모바일 웹";
+        var start = 0, end = 100.0;
+        var message, condition, sender, receiver;
+
+        //변수 형변환 예제
+        var a = "3";
+        var b = 2;
+        c = b + 3 + a;
+        d = a + b;
+        document.write(c + " ");
+        document.write(d + "<br>");
+
+
+        var length = 123, length_num, length_str;
+        length_num = length + 10;
+        length_str = length.toString() + 10;
+        document.write("Length in Number: " + length_num + "cm" + "<br>");
+        document.write("Length in String: " + length_str + "cm" + "<br>");
+
+        var num = parseInt(length_str) + 20;
+        document.write("Length in Integer: " + num + "cm<br><br>");
+
+        //화면 출력 예제
+        var title1 = "멀티미디어 배움터2.0";
+        var title2 = "모바일 멀티미디어";
+        var title3 = "자바입문: 이론과 실습";
+        var num = 1;
+
+        document.write("<table border=" + num + ">");
+        document.write("<caption>베스트 셀러</caption>");
+        document.write("<tr>");
+        document.write("<th>순위 </th>");
+        document.write("<th>제목 </th>");
+        document.write("</tr>");
+        document.write("<tr><td> 1 </td><td>" + title1 + "</td></tr>");
+        document.write("<tr><td> 2 </td><td>" + title2 + "</td></tr>");
+        document.write("<tr><td> 3 </td><td>" + title3 + "</td></tr>");
+        document.write("</table>");
+
+        //대화상자로 메시지 출력
+        alert("HTML5 프로그래밍 \n웹사이트로 이동합니다.");
+        //확인 입력 받기
+        var answer1 = confirm("주문한 서적을 결재하시겠습니까?");
+        document.write("Answer = " + answer1 + "<br>"); //return 'true' or 'false'
+        //키보드로부터 문자열 입력 받기
+        var answer2 = prompt("서적 제목을 입력해 주세요.", "모바일 멀티미디어");
+        document.write("Answer = " + answer2 + "<br>"); //return '<입력 내용>(문자열 형식)'' or 'null'
+
+        //while 반복문 예제
+        document.write("<table border="+num+">");
+        document.write("<tr>");
+        document.write("<td>Value</td>");
+
+        fib1 = 1;
+        fib2 = 1;
+        while (fib2 < 1000) {
+            document.write("<td>");
+            document.write(fib2);
+            document.write("</td>");
+            tmp = fib1 + fib2;
+            fib1 = fib2;
+            fib2 = tmp;
+        }
+        document.write("</tr>");
+        
+        //사용자 정의 함수 예쩨
+        function add(a, b){
+            return a+b;
+        }
+        result = add(12, 34);
+        document.write("result is : "+ result+"<br>");
+
+        //시잔지연함수 예제
+        function show_alert(){
+            alert("5 seconds passed...");
+        }
+        function show_message(){
+            document.write("3 seconds passed...");
+        }
+
+        setTimeout(show_alert, 5000); //단위는 ms, 1000ms == 1s
+        setTimeout(show_message, 3000);
+
+    </script>
+</body>
+
+</html>
