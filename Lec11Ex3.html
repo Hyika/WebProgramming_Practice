@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            setTimeout()을 이용한 예제
+        </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var stopeed=false;
+
+            function start(){
+                dom=document.getElementById("sec");
+                dom.value=parseInt(dom.value) + 1;
+                if(!stopped) setTimeout(start, 10);
+            }
+
+            //사전에 정의된 함수 이름은 사용 불가능
+            function clear1(){
+                dom=document.getElementById("sec");
+                dom.value=0;
+            }
+        </script>
+
+        <h2>Stopwatch</h2>
+        <form action="">
+            <input type="button" value="Start" onclick="stopped=false; setTimeout(start,1000);"/>
+            <input type="button" value="Stop" onclick="stopped=true";/>
+            <input type="button" value="Clear" onclick="clear1();"/><br><br>
+            <input id="sec" type="text" value="0" size="2"/>seconds
+        </form>
+    </body>
+</html>

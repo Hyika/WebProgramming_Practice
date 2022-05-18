@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            간단한 이벤트 처리 예제
+        </title>
+    </head>
+    <body>
+        <form action="">
+            <input type=="button" value="Yes" onclick="alert('You pressed Yes');"/>
+            <input type=="button" value="No" ondblclick="alert('You pressed No');"/>
+            <!--onmouse~~~~은 margin 영역-->
+            <input id="username" type="text" value="Name of User" onclick="alert('Please type your full name');"/>
+            <input id="username2" type="text" value="Name of User2" onclick="myEventHandler();"/>
+        </form>
+
+        <script type="text/javascript">
+            function myEventHandler(){
+                alert("Please type your full name");
+            }
+        </script>
+    </body>
+</html>
