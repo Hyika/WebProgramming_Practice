@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            캔버스 시작하기2
+        </title>
+    </head>
+    <body>
+        <canvas id = "myCanvas" width = "300" height = "200"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            myContext.beginPath();
+            //원 그리기
+            //arc(x, y, r, startAngle, endAngle, antiClockwise)
+            //원점이 [x, y]이고 반지름이 r인 원호를 그린다.
+            //시작 각도(startAngle)와 끝 각도(endAngle)를 지정하여 원호를 그린다.
+            myContext.arc(30, 100, 20, 0, 1.5*Math.PI); //Math.PI 상수를 이용해 각도 지정
+            myContext.lineTo(30, 100);
+            myContext.closePath();
+            myContext.stroke();
+
+            myContext.beginPath();
+            myContext.arc(110, 100, 40, 1*Math.PI, 1.5*Math.PI, true);
+            myContext.closePath(); //경로 시작점까지 직선으로 연결하며 경로를 종료한다.
+            myContext.stroke();
+
+            myContext.beginPath();
+            myContext.arc(240, 100, 60, 0, 2*Math.PI);
+            myContext.stroke();
+        </script>
+    </body>
+</html>

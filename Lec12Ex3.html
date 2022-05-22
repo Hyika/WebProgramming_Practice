@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            캔버스 시작하기3
+        </title>
+    </head>
+    <body>
+        <canvas id = "myCanvas" width = "600" height = "400"></canvas>
+        <script type="text/javascript">
+            var canvas = document.getElementById("myCanvas");
+            var myContext = canvas.getContext("2d");
+
+            //quadraticCurveTo() : 제어점이 1개
+            myContext.moveTo(50, 200);
+            myContext.quadraticCurveTo(100, 10, 200, 200);
+            myContext.stroke();
+
+            //bezierCurveTo() : 제어점이 2개
+            myContext.moveTo(300, 200);
+            myContext.bezierCurveTo(300, 100, 600, 100, 450, 200);
+
+            myContext.stroke();
+        </script>
+    </body>
+</html>
